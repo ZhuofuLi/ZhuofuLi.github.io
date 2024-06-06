@@ -1,1 +1,2 @@
-console.log('Welcome to my personal website!');
+// Add any interactivity here if needed
+console.log('Welcome to Zhuofu (Chester) Li\'s personal website!');
