@@ -213,6 +213,9 @@ footer {
     h2 {
         font-size: 30px;
     }
+    p {
+        font-size: 25px;
+    }
     .description {
         font-size: 30px;
     }
@@ -252,6 +255,9 @@ footer {
     }
     h2 {
         font-size: 30px;
+    }
+    p {
+        font-size: 25px;
     }
     .description {
         font-size: 25px;
