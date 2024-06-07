@@ -360,12 +360,12 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 90px;
-        height: 90px;
-        margin: -45px 0 0 -45px; /* Center the orbit */
+        width: 140px;
+        height: 140px;
+        margin: -70px 0 0 -70px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
-        animation: rotate 10s linear infinite;
+        animation: rotate 8s linear infinite;
         z-index: 1;
     }
     
@@ -373,12 +373,12 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 170px;
-        height: 170px;
-        margin: -85px 0 0 -85px; /* Center the orbit */
+        width: 200px;
+        height: 200px;
+        margin: -100px 0 0 -100px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
-        animation: rotate 12s linear infinite;
+        animation: rotate 10s linear infinite;
         z-index: 1;
     }
     
@@ -386,12 +386,12 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 250px;
-        height: 250px;
-        margin: -125px 0 0 -125px; /* Center the orbit */
+        width: 280px;
+        height: 280px;
+        margin: -140px 0 0 -140px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
-        animation: rotate 15s linear infinite;
+        animation: rotate 13s linear infinite;
         z-index: 1;
     }
     
