@@ -447,7 +447,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .profile-picture-container {
         top: 40%;
         width: 80%;
@@ -459,6 +459,9 @@ footer {
         height: 200px;
     }
     h1 {
+        font-size: 30px;
+    }
+    p {
         font-size: 30px;
     }
     .description {
@@ -485,9 +488,10 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .nav-links {
         flex-direction: column;
+        align-items: flex-start;
     }
     .nav-links li {
         margin: 10px 0;
@@ -496,6 +500,12 @@ footer {
         font-size: 20px;
     }
     h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    p {
         font-size: 25px;
     }
     .description {
