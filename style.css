@@ -71,12 +71,42 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
+h2 {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 p {
     position: absolute;
     top: 125%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
+}
+
+k {
+
+    top: 30%;
+    display: block; /* Make sure the custom tag behaves like a block element */
+    font-family: Arial, sans-serif; /* Set the font family */
+    font-size: 22px; /* Set the font size */
+    line-height: 1.6; /* Set the line height for better readability */
+    margin-bottom: 1em; /* Add space between elements */
+    color: white; /* Set the text color */
+}
+
+c {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 25px;
 }
 
 .description {
@@ -236,18 +266,6 @@ p {
     border-radius: 50%;
     animation: rotate 10s linear infinite;
     z-index: 1;
-}
-
-.center-dot {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-    margin: -5px 0 0 -5px; /* Offset to center the dot */
-    z-index: 2; /* Ensure it is above other elements */
 }
 
 .orbit2 {

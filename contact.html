@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Chester Li</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .about-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        p {
+            line-height: 1.6;
+        }
+        nav {
+            background-color: black;
+            padding: 10px;
+        }
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .nav-links li {
+            float: left;
+        }
+        .nav-links li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav-links li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/files/CV.pdf" target="_blank">CV</a></li>
+                <li><a href="https://scholar.google.com/citations?user=tfgy_IUAAAAJ&hl=en&oi=sra" target="_blank">Publications</a></li>
+                <li><a href="https://www.linkedin.com/in/chester-li-0354071a2/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-container">
+        <h2>Contact</h2>
+        <c>Email: <span id="email"></span></c>
+    </div>
+    <script>
+        document.getElementById("email").innerHTML = "zhuofu" + "@" + "uw.edu";
+    </script>
+</body>
+</html>
