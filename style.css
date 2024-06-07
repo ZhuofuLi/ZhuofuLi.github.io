@@ -448,8 +448,8 @@ footer {
             height: 100px;
         }
         100% {
-            width: 8000px;
-            height: 8000px;
+            width: 500px;
+            height: 500px;
             transform: translate(-50%, -50%) scale(0);
         }
     }
