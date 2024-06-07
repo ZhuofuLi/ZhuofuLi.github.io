@@ -195,6 +195,57 @@ footer {
     font-size: 5px; /* Much smaller font size */
 }
 
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.white-hole {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: expand 3s forwards;
+}
+
+@keyframes expand {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 8000px;
+        height: 8000px;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.spiral-in {
+    animation: spiral-in-animation 2s forwards;
+}
+
+@keyframes spiral-in-animation {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(720deg) scale(0);
+        opacity: 0;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 770px) {
     .profile-picture-container {
@@ -237,17 +288,14 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .nav-links {
-        flex-direction: column;
-    }
     .nav-links li {
         margin: 10px 0;
     }
     .nav-links a {
-        font-size: 25px;
+        font-size: 10px;
     }
     h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     h2 {
         position: absolute;
@@ -255,7 +303,7 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
-        font-size: 50px;
+        font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
     }
     p {
@@ -267,7 +315,7 @@ footer {
     .about-container {
         padding-top: 60px; /* Ensures there's space for the nav */
     }
-    footer {
+    .footer-content {
         font-size: 15px;
     }
     .orbit {
@@ -287,61 +335,3 @@ footer {
     }
 }
 
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #000;
-    color: white;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.red-circle {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.white-hole {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    animation: expand 3s forwards;
-}
-
-@keyframes expand {
-    0% {
-        width: 100px;
-        height: 100px;
-    }
-    100% {
-        width: 8000px;
-        height: 8000px;
-        transform: translate(-50%, -50%) scale(0);
-    }
-}
-
-.spiral-in {
-    animation: spiral-in-animation 2s forwards;
-}
-
-@keyframes spiral-in-animation {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(720deg) scale(0);
-        opacity: 0;
-    }
-}
