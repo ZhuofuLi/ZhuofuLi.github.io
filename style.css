@@ -14,11 +14,13 @@ body, html {
     display: flex;
     justify-content: center;
     margin: 0;
+    z-index: 100;
 }
 
 .nav-links li {
     margin: 0 15px;
     font-family: 'Times New Roman', Times, serif;
+    z-index: 100;
 }
 
 .nav-links a {
@@ -27,10 +29,12 @@ body, html {
     font-size: 30px; /* Larger font size */
     padding: 10px;
     display: block;
+    z-index: 100;
 }
 
 .nav-links a:hover {
     color: #aaa;
+    z-index: 100;
 }
 
 .header-container {
@@ -97,7 +101,6 @@ k {
     color: white; /* Set the text color */
 }
 
-/* Additional styles for other elements */
 c {
     position: absolute;
     top: 40%;
@@ -117,6 +120,18 @@ c {
     white-space: nowrap; /* Ensure text stays on one line */
 }
 
+.center-dot {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin: -5px 0 0 -5px; /* Offset to center the dot */
+    z-index: 2; /* Ensure it is above other elements */
+}
+
 .orbit {
     position: absolute;
     top: 40%;
@@ -130,18 +145,6 @@ c {
     z-index: 1;
 }
 
-.center-dot {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-    margin: -5px 0 0 -5px; /* Offset to center the dot */
-    z-index: 2; /* Ensure it is above other elements */
-}
-
 .orbit2 {
     position: absolute;
     top: 45%;
@@ -149,17 +152,19 @@ c {
     width: 400px;
     height: 400px;
     margin: -150px 0 0 -150px;
-    animation-duration: 15s;
+    animation-duration: 12s;
+    z-index: 1;
 }
 
 .orbit3 {
     position: absolute;
     top: 40%;
     left: 50%;
-    width: 400px;
-    height: 400px;
-    margin: -200px 0 0 -200px;
-    animation-duration: 20s;
+    width: 500px;
+    height: 500px;
+    margin: -250px 0 0 -250px;
+    animation-duration: 15s;
+    z-index: 1;
 }
 
 @keyframes rotate {
@@ -271,19 +276,19 @@ footer {
         font-size: 25px;
     }
     .orbit {
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+    }
+    .orbit2 {
         width: 200px;
         height: 200px;
         margin: -100px 0 0 -100px;
     }
-    .orbit2 {
-        width: 300px;
-        height: 300px;
-        margin: -150px 0 0 -150px;
-    }
     .orbit3 {
-        width: 400px;
-        height: 400px;
-        margin: -200px 0 0 -200px;
+        width: 250px;
+        height: 250px;
+        margin: -125px 0 0 -125px;
     }
 }
 
@@ -292,7 +297,7 @@ footer {
         margin: 10px 0;
     }
     .nav-links a {
-        font-size: 20px;
+        font-size: 17px;
     }
     h1 {
         font-size: 35px;
