@@ -138,7 +138,7 @@ c {
     left: 50%;
     width: 300px;
     height: 300px;
-    margin: -100px 0 0 -100px;
+    margin: -150px 0 0 -150px; /* Center the orbit */
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     animation: rotate 10s linear infinite;
@@ -147,12 +147,14 @@ c {
 
 .orbit2 {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     width: 400px;
     height: 400px;
-    margin: -150px 0 0 -150px;
-    animation-duration: 12s;
+    margin: -200px 0 0 -200px; /* Center the orbit */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: rotate 12s linear infinite;
     z-index: 1;
 }
 
@@ -162,34 +164,54 @@ c {
     left: 50%;
     width: 500px;
     height: 500px;
-    margin: -250px 0 0 -250px;
-    animation-duration: 15s;
+    margin: -250px 0 0 -250px; /* Center the orbit */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
     z-index: 1;
+}
+
+.planet {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
+}
+
+.planet2 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
+}
+
+.planet3 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @keyframes rotate {
     0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
     100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
-}
-
-.orbit2 .planet2 {
-    transform: translate(-50%, -50%) translateX(300px); /* Centered and translated */
-    animation: rotate2 15s linear infinite;
-}
-
-@keyframes rotate2 {
-    0% { transform: rotate(0deg) translateX(300px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
-}
-
-.orbit3 .planet3 {
-    transform: translate(-50%, -50%) translateX(350px); /* Centered and translated */
-    animation: rotate3 20s linear infinite;
-}
-
-@keyframes rotate3 {
-    0% { transform: rotate(0deg) translateX(300px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
 }
 
 footer {
@@ -297,7 +319,7 @@ footer {
         margin: 10px 0;
     }
     .nav-links a {
-        font-size: 17px;
+        font-size: 15px;
     }
     h1 {
         font-size: 35px;
@@ -323,20 +345,6 @@ footer {
     .footer-content {
         font-size: 15px;
     }
-    .orbit {
-        width: 50px;
-        height: 50px;
-        margin: -25px 0 0 -25px;
-    }
-    .orbit2 {
-        width: 100px;
-        height: 100px;
-        margin: -50px 0 0 -50px;
-    }
-    .orbit3 {
-        width: 150px;
-        height: 150px;
-        margin: -75px 0 0 -75px;
-    }
+
 }
 
