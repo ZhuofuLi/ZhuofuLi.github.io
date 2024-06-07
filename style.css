@@ -319,6 +319,16 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .profile-picture-container {
+        top: 40%;
+        width: 200px; /* Adjusted width */
+        height: 200px; /* Adjusted height */
+        padding: 10px;
+    }
+    .profile-picture {
+        width: 180px; /* Adjusted width */
+        height: 180px; /* Adjusted height */
+    }
     .nav-links li {
         margin: 10px 0;
     }
