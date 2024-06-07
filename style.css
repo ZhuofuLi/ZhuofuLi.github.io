@@ -318,8 +318,8 @@ footer {
 @media (max-width: 480px) {
     .profile-picture-container {
         top: 40%;
-        width: 200px; /* Adjusted width */
-        height: 200px; /* Adjusted height */
+        width: 190px; /* Adjusted width */
+        height: 190px; /* Adjusted height */
         padding: 10px;
     }
     .profile-picture {
