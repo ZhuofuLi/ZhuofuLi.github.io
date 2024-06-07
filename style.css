@@ -385,7 +385,7 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 280px;
+        width: 270px;
         height: 280px;
         margin: -140px 0 0 -140px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -433,10 +433,25 @@ footer {
         0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
         100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
     }
+    
     .white-hole {
-        top: 50%; /* Ensures the element is vertically centered */
-        left: 50%; /* Ensures the element is horizontally centered */
+        width: 100px;  /* Ensure initial size is appropriate for small screens */
+        height: 100px; /* Ensure initial size is appropriate for small screens */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
+    }
+    
+    @keyframes expand {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+        100% {
+            width: 8000px;
+            height: 8000px;
+            transform: translate(-50%, -50%) scale(0);
+        }
     }
 }
 
