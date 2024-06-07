@@ -217,7 +217,7 @@ footer {
         font-size: 25px;
     }
     .description {
-        font-size: 30px;
+        font-size: 25px;
     }
     .orbit {
         width: 200px;
@@ -257,10 +257,10 @@ footer {
         font-size: 25px;
     }
     p {
-        font-size: 20px;
+        font-size: 15px;
     }
     .description {
-        font-size: 25px;
+        font-size: 15px;
     }
     .about-container {
         padding-top: 60px; /* Ensures there's space for the nav */
