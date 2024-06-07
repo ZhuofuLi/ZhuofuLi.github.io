@@ -434,6 +434,10 @@ footer {
         0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
         100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
     }
-
+    .white-hole {
+        top: 50%; /* Ensures the element is vertically centered */
+        left: 50%; /* Ensures the element is horizontally centered */
+        transform: translate(-50%, -50%);
+    }
 }
 
