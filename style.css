@@ -431,8 +431,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
     }
     .white-hole {
         top: 50%; /* Ensures the element is vertically centered */
