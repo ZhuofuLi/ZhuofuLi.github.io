@@ -313,7 +313,7 @@ footer {
         font-size: 25px;
     }
     .about-container {
-        padding-top: 100px; /* Ensures there's space for the nav */
+        padding-top: 200px; /* Ensures there's space for the nav */
     }
     .orbit {
         width: 150px;
@@ -447,8 +447,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(125px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(125px) rotate(-360deg); }
     }
     
     .white-hole {
