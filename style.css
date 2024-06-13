@@ -287,16 +287,10 @@ footer {
         height: 200px;
     }
     h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
     h2 {
-        position: absolute;
-        top: 22%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        font-size: 35px;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
     }
     p {
         font-size: 25px;
@@ -447,8 +441,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(125px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(125px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(115px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(115px) rotate(-360deg); }
     }
     
     .white-hole {
