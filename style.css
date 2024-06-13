@@ -304,6 +304,14 @@ footer {
     .description {
         font-size: 25px;
     }
+    k {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: 25px;
+    }
     .orbit {
         width: 150px;
         height: 150px;
@@ -436,8 +444,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
     }
     
     .white-hole {
