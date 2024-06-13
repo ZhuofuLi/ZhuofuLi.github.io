@@ -365,8 +365,8 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 140px;
-        height: 140px;
+        width: 130px;
+        height: 130px;
         margin: -70px 0 0 -70px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
@@ -378,8 +378,8 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 200px;
-        height: 200px;
+        width: 190px;
+        height: 190px;
         margin: -100px 0 0 -100px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
@@ -391,8 +391,8 @@ footer {
         position: absolute;
         top: 40%;
         left: 50%;
-        width: 270px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
         margin: -140px 0 0 -140px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
@@ -436,8 +436,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(75px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
     }
     
     .white-hole {
