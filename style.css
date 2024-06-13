@@ -368,11 +368,11 @@ footer {
     }
     .orbit {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 50%;
         width: 130px;
         height: 130px;
-        margin: -70px 0 0 -70px; /* Center the orbit */
+        margin: -65px 0 0 -65px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 8s linear infinite;
@@ -381,11 +381,11 @@ footer {
     
     .orbit2 {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 50%;
         width: 190px;
         height: 190px;
-        margin: -100px 0 0 -100px; /* Center the orbit */
+        margin: -95px 0 0 -95px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 10s linear infinite;
@@ -394,11 +394,11 @@ footer {
     
     .orbit3 {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 50%;
-        width: 260px;
-        height: 260px;
-        margin: -140px 0 0 -140px; /* Center the orbit */
+        width: 230px;
+        height: 230px;
+        margin: -115px 0 0 -115px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 13s linear infinite;
@@ -441,8 +441,8 @@ footer {
         z-index: 1;
     }
     @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(115px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(115px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(118px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(118px) rotate(-360deg); }
     }
     
     .white-hole {
