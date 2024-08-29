@@ -266,37 +266,62 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    .nav-links a {
-        font-size: 20px; /* Smaller font size for mobile */
+    /* Navigation links - vertical and smaller */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
     }
     
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        width: 250px;
-        height: 250px;
+        width: 200px; /* Smaller profile picture container */
+        height: 200px;
     }
 
-    .description {
-        font-size: 30px;
-        left: 0; /* Adjust positioning for smaller screens */
-        top: 120%;
+    .profile-picture {
+        width: 190px; /* Smaller profile picture */
+        height: 190px;
+        border: 5px solid white; /* Adjusted border size */
     }
 
-    h1 {
-        font-size: 50px;
+    /* Adjust the orbits and planets */
+    .orbit {
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px; /* Center the orbit */
     }
 
-    .orbit, .orbit2, .orbit3 {
+    .orbit2 {
         width: 200px;
         height: 200px;
-        margin: -100px 0 0 -100px; /* Adjust the orbits */
+        margin: -100px 0 0 -100px; /* Center the orbit */
+    }
+
+    .orbit3 {
+        width: 250px;
+        height: 250px;
+        margin: -125px 0 0 -125px; /* Center the orbit */
     }
 
     .planet, .planet2, .planet3 {
-        width: 15px;
+        width: 15px; /* Smaller planet size */
         height: 15px;
     }
 
-    footer .footer-content {
-        font-size: 20px;
+    /* Description adjustments if necessary */
+    .description {
+        font-size: 30px; /* Adjust font size as needed */
+        top: 120%; /* Adjust the position relative to the profile picture */
+        left: 0; /* Center on smaller screens */
     }
 }
