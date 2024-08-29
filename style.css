@@ -303,17 +303,17 @@ footer {
     animation: shoot 2s ease-in-out forwards;
 }
 
-/* Shooting star animation */
 @keyframes shoot {
     from {
         transform: translateX(0) translateY(0) rotate(45deg);
         opacity: 1;
     }
     to {
-        transform: translateX(-1000px) translateY(-1000px) rotate(45deg);
+        transform: translateX(-1500px) translateY(-1500px) rotate(45deg);
         opacity: 0;
     }
 }
+
 
 
 
