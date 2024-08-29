@@ -65,6 +65,29 @@ body, html {
     object-fit: cover;
 }
 
+.profile-picture-container:hover .profile-picture {
+    animation: rotate-in-place 2s linear infinite;
+}
+
+@keyframes rotate-in-place {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 340px;
+    height: 340px;
+    border: 10px solid white;
+    object-fit: cover;
+    transition: transform 0.5s ease-out; /* Smoothly restore to original state */
+}
+
+
 h1 {
     position: absolute;
     top: 10%;
