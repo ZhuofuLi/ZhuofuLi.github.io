@@ -278,7 +278,10 @@ footer {
     }
 }
 
-
+.profile-picture:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.5s ease-in-out;
+}
 
 
 
@@ -311,11 +314,11 @@ footer {
 
     .nav-links a {
         font-size: 18px;
-        padding: 5px 0;
+        padding: 7px 0;
     }
 
     h1 {
-        top: 7%;
+        top: 9%;
         font-size: 50px;
     }
 
@@ -329,7 +332,7 @@ footer {
     
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        top: 22%;
+        top: 27%;
         width: 200px;
         height: 200px;
         position: relative;
@@ -360,11 +363,11 @@ footer {
 
     /* Orbits and planets adjusted for mobile */
     .orbit {
-        top: 22%; /* Align with the profile picture */
+        top: 27%; /* Align with the profile picture */
         left: 50%;
-        width: 220px; /* Smaller orbit */
-        height: 220px;
-        margin: -110px 0 0 -110px; /* Center the orbit */
+        width: 160px; /* Smaller orbit */
+        height: 160px;
+        margin: -80px 0 0 -80px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 10s linear infinite;
@@ -372,11 +375,11 @@ footer {
     }
 
     .orbit2 {
-        top: 22%;
+        top: 27%;
         left: 50%;
-        width: 260px; /* Smaller orbit */
-        height: 260px;
-        margin: -130px 0 0 -130px; /* Center the orbit */
+        width: 180px; /* Smaller orbit */
+        height: 180px;
+        margin: -90px 0 0 -90px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 12s linear infinite;
@@ -384,11 +387,11 @@ footer {
     }
 
     .orbit3 {
-        top: 22%;
+        top: 27%;
         left: 50%;
-        width: 300px; /* Smaller orbit */
-        height: 300px;
-        margin: -150px 0 0 -150px; /* Center the orbit */
+        width: 200px; /* Smaller orbit */
+        height: 200px;
+        margin: -100px 0 0 -100px; /* Center the orbit */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         animation: rotate 15s linear infinite;
