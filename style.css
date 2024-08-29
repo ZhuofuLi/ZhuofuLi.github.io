@@ -8,17 +8,18 @@ body, html {
     color: white;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     padding: 20px 0;
     display: flex;
     justify-content: center;
     margin: 0;
-    z-index: 100;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 100;
 }
@@ -26,7 +27,7 @@ body, html {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 30px; /* Larger font size */
+    font-size: 5vw; /* Responsive font size */
     padding: 10px;
     display: block;
     z-index: 100;
@@ -37,6 +38,7 @@ body, html {
     z-index: 100;
 }
 
+/* Header Container */
 .header-container {
     position: relative;
     width: 100%;
@@ -44,156 +46,121 @@ body, html {
     text-align: center;
 }
 
+/* Profile Picture */
 .profile-picture-container {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 10;
-    width: 350px; /* 300px for image + 10px border on each side */
-    height: 350px; /* 300px for image + 10px border on each side */
+    width: 80vw; /* Responsive width */
+    height: 80vw; /* Maintain aspect ratio */
     background-color: #000;
     border-radius: 50%;
 }
 
 .profile-picture {
     border-radius: 50%;
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     border: 10px solid white;
     object-fit: cover;
 }
 
+/* Heading */
 h1 {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    font-size: 70px;
+    font-size: 10vw; /* Responsive font size */
     font-family: 'Times New Roman', Times, serif;
     z-index: 10;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 8vw;
     margin-bottom: 20px;
     text-align: center;
 }
 
 p {
-    font-size: 22px;
+    font-size: 5vw;
     line-height: 1.6;
     margin-bottom: 1.5em;
     text-align: justify;
+    padding: 0 10px; /* Add padding for readability */
 }
 
+/* Description */
 .description {
-    font-size: 40px; /* Adjust font size as needed */
+    font-size: 6vw;
     font-family: 'EB Garamond', serif;
     font-weight: 700;
     font-style: italic;
-    letter-spacing: 0.10em; /* Adjust letter spacing as needed */
-    white-space: nowrap; /* Ensure text stays on one line */
-    text-align: center; /* Center the text */
-    width: 100%; /* Ensure it takes up the full width of its container */
+    letter-spacing: 0.10em;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
     position: absolute;
-    top: 130%;
-    left: -40%;
+    top: 150%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* Orbit Animations */
 .center-dot {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     width: 10px;
     height: 10px;
     background-color: black;
     border-radius: 50%;
-    margin: -5px 0 0 -5px; /* Offset to center the dot */
-    z-index: 2; /* Ensure it is above other elements */
+    z-index: 2;
 }
 
-.orbit {
+.orbit, .orbit2, .orbit3 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
-    margin: -150px 0 0 -150px; /* Center the orbit */
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     animation: rotate 10s linear infinite;
     z-index: 1;
 }
 
+.orbit {
+    width: 60vw;
+    height: 60vw;
+    margin: -30vw 0 0 -30vw; /* Adjust based on width */
+}
+
 .orbit2 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin: -200px 0 0 -200px; /* Center the orbit */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+    width: 80vw;
+    height: 80vw;
+    margin: -40vw 0 0 -40vw;
     animation: rotate 12s linear infinite;
-    z-index: 1;
 }
 
 .orbit3 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 500px;
-    height: 500px;
-    margin: -250px 0 0 -250px; /* Center the orbit */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+    width: 100vw;
+    height: 100vw;
+    margin: -50vw 0 0 -50vw;
     animation: rotate 15s linear infinite;
-    z-index: 1;
 }
 
-.planet {
-    width: 20px;
-    height: 20px;
+/* Planet Sizes */
+.planet, .planet2, .planet3 {
+    width: 4vw;
+    height: 4vw;
     background-color: gray;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-    z-index: 1;
-}
-
-.planet2 {
-    width: 20px;
-    height: 20px;
-    background-color: gray;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-    z-index: 1;
-}
-
-.planet3 {
-    width: 20px;
-    height: 20px;
-    background-color: gray;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-    z-index: 1;
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+    margin: -2vw 0 0 -2vw; /* Center the planets */
 }
 
 footer {
@@ -201,7 +168,7 @@ footer {
     padding: 10px;
     background-color: #000;
     color: white;
-    font-size: 5px; /* Much smaller font size */
+    font-size: 3vw; /* Smaller font size */
 }
 
 .footer-content {
@@ -211,56 +178,34 @@ footer {
     padding: 10px;
     background-color: #000;
     color: white;
-    font-size: 30px;
+    font-size: 6vw;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.white-hole {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    animation: expand 3s forwards;
-}
-
-.about-container p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 1.5em;
-    text-align: justify;
-    max-width: 800px; /* Ensure paragraphs also respect the max-width */
-    margin: 0 auto; /* Center the paragraphs within the container */
-}
-
-
-@keyframes expand {
-    0% {
-        width: 100px;
-        height: 100px;
+/* Media Queries for Smaller Devices */
+@media (max-width: 600px) {
+    .profile-picture-container {
+        width: 60vw;
+        height: 60vw;
     }
-    100% {
-        width: 8000px;
-        height: 8000px;
-        transform: translate(-50%, -50%) scale(0);
-    }
-}
 
-.spiral-in {
-    animation: spiral-in-animation 2s forwards;
-}
-
-@keyframes spiral-in-animation {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-        opacity: 1;
+    h1 {
+        font-size: 8vw;
     }
-    100% {
-        transform: translate(-50%, -50%) rotate(720deg) scale(0);
-        opacity: 0;
+
+    h2 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 4.5vw;
+    }
+
+    .description {
+        font-size: 5vw;
+    }
+
+    .footer-content {
+        font-size: 5vw;
     }
 }
