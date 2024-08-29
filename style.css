@@ -298,6 +298,7 @@ footer {
 
     .description {
         font-size: 25px;
+        left: 0%;
     }
 
     .about-container {
@@ -321,6 +322,7 @@ footer {
         height: 250px;
         margin: -125px 0 0 -125px;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -360,6 +362,7 @@ footer {
     }
     .description {
         font-size: 15px;
+        left: 0%;
     }
 
     .about-container {
