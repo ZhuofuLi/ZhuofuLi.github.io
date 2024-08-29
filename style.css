@@ -282,6 +282,15 @@ footer {
         padding: 5px 0;
     }
 
+    .about-container {
+        padding: 20px; /* Keep the existing padding */
+        max-width: 800px;
+        margin: auto;
+        padding-left: 30px;  /* Add some padding to the left */
+        padding-right: 30px; /* Add some padding to the right */
+    }
+    
+
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
         width: 200px; /* Smaller profile picture container */
@@ -294,23 +303,23 @@ footer {
         border: 5px solid white; /* Adjusted border size */
     }
 
-    /* Adjust the orbits and planets */
+    /* Adjust the orbits and planets to be closer to the center dot */
     .orbit {
-        width: 150px;
+        width: 100px; /* Smaller orbit size */
+        height: 100px;
+        margin: -50px 0 0 -50px; /* Center the orbit */
+    }
+
+    .orbit2 {
+        width: 150px; /* Smaller orbit size */
         height: 150px;
         margin: -75px 0 0 -75px; /* Center the orbit */
     }
 
-    .orbit2 {
-        width: 200px;
+    .orbit3 {
+        width: 200px; /* Smaller orbit size */
         height: 200px;
         margin: -100px 0 0 -100px; /* Center the orbit */
-    }
-
-    .orbit3 {
-        width: 250px;
-        height: 250px;
-        margin: -125px 0 0 -125px; /* Center the orbit */
     }
 
     .planet, .planet2, .planet3 {
@@ -318,10 +327,11 @@ footer {
         height: 15px;
     }
 
-    /* Description adjustments if necessary */
+    /* Smaller description text */
     .description {
-        font-size: 30px; /* Adjust font size as needed */
-        top: 120%; /* Adjust the position relative to the profile picture */
+        font-size: 20px; /* Smaller font size for the description */
+        top: 100%; /* Adjust the position relative to the profile picture */
         left: 0; /* Center on smaller screens */
+        transform: translate(-50%, -50%);
     }
 }
