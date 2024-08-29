@@ -267,7 +267,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 770px) {
+@media (max-width: 768px) {
     .profile-picture-container {
         top: 40%;
         width: 80%;
@@ -298,7 +298,7 @@ footer {
 
     .description {
         font-size: 15px;
-        left: 0%;
+        left: 20%;
     }
 
     .about-container {
@@ -323,71 +323,4 @@ footer {
         margin: -125px 0 0 -125px;
     }
 
-}
-
-@media (max-width: 480px) {
-    .profile-picture-container {
-        top: 40%;
-        width: 190px;
-        height: 190px;
-    }
-
-    .profile-picture {
-        width: 180px;
-        height: 180px;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 15px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-        margin-bottom: 12px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.4;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-    .description {
-        font-size: 12px;
-        left: 0%;
-    }
-
-    .about-container {
-        padding: 10px;
-    }
-
-    .orbit {
-        width: 130px;
-        height: 130px;
-        margin: -65px 0 0 -65px;
-    }
-
-    .orbit2 {
-        width: 190px;
-        height: 190px;
-        margin: -95px 0 0 -95px;
-    }
-
-    .orbit3 {
-        width: 230px;
-        height: 230px;
-        margin: -115px 0 0 -115px;
-    }
-
-    .footer-content {
-        font-size: 15px;
-    }
 }
