@@ -77,38 +77,16 @@ h1 {
 }
 
 h2 {
-    position: absolute;
-    top: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 70px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 p {
-    position: absolute;
-    top: 125%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-k {
-    display: block; /* Make sure the custom tag behaves like a block element */
-    font-family: Arial, sans-serif; /* Set the font family */
-    font-size: 22px; /* Set the font size */
-    line-height: 1.6; /* Set the line height for better readability */
-    margin-bottom: 1em; /* Add space between elements */
-    color: white; /* Set the text color */
-}
-
-c {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 25px;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-align: justify;
 }
 
 .description {
@@ -119,6 +97,12 @@ c {
     letter-spacing: 0.10em; /* Adjust letter spacing as needed */
     margin-top: 10px;
     white-space: nowrap; /* Ensure text stays on one line */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it takes up the full width of its container */
+    position: absolute;
+    top: 130%;
+    left: -30%;
+    transform: translate(-50%, -50%);
 }
 
 .center-dot {
@@ -208,8 +192,6 @@ c {
     z-index: 1;
 }
 
-
-
 @keyframes rotate {
     0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
     100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
@@ -247,6 +229,16 @@ footer {
     animation: expand 3s forwards;
 }
 
+.about-container p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    max-width: 800px; /* Ensure paragraphs also respect the max-width */
+    margin: 0 auto; /* Center the paragraphs within the container */
+}
+
+
 @keyframes expand {
     0% {
         width: 100px;
@@ -282,43 +274,47 @@ footer {
         height: auto;
         padding: 10px;
     }
+
     .profile-picture {
         width: 200px;
         height: 200px;
     }
+
     h1 {
         font-size: 30px;
     }
+
     h2 {
-        font-size: 30px;
+        font-size: 28px;
+        margin-bottom: 15px;
     }
+
     p {
-        font-size: 25px;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 1.2em;
     }
+
     .description {
         font-size: 25px;
     }
-    k {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        font-size: 25px;
-    }
+
     .about-container {
-        padding-top: 200px; /* Ensures there's space for the nav */
+        padding: 15px;
     }
+
     .orbit {
         width: 150px;
         height: 150px;
         margin: -75px 0 0 -75px;
     }
+
     .orbit2 {
         width: 200px;
         height: 200px;
         margin: -100px 0 0 -100px;
     }
+
     .orbit3 {
         width: 250px;
         height: 250px;
@@ -329,139 +325,65 @@ footer {
 @media (max-width: 480px) {
     .profile-picture-container {
         top: 40%;
-        width: 190px; /* Adjusted width */
-        height: 190px; /* Adjusted height */
+        width: 190px;
+        height: 190px;
     }
+
     .profile-picture {
-        width: 180px; /* Adjusted width */
-        height: 180px; /* Adjusted height */
+        width: 180px;
+        height: 180px;
     }
+
     .nav-links li {
         margin: 10px 0;
     }
+
     .nav-links a {
         font-size: 15px;
     }
+
     h1 {
-        font-size: 35px;
+        font-size: 28px;
     }
+
     h2 {
-        position: absolute;
-        top: 22%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        font-size: 35px;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: 24px;
+        margin-bottom: 12px;
     }
+
     p {
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 1em;
     }
+
     .description {
         font-size: 15px;
     }
+
     .about-container {
-        padding-top: 60px; /* Ensures there's space for the nav */
+        padding: 10px;
     }
+
+    .orbit {
+        width: 130px;
+        height: 130px;
+        margin: -65px 0 0 -65px;
+    }
+
+    .orbit2 {
+        width: 190px;
+        height: 190px;
+        margin: -95px 0 0 -95px;
+    }
+
+    .orbit3 {
+        width: 230px;
+        height: 230px;
+        margin: -115px 0 0 -115px;
+    }
+
     .footer-content {
         font-size: 15px;
     }
-    .orbit {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 130px;
-        height: 130px;
-        margin: -65px 0 0 -65px; /* Center the orbit */
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        animation: rotate 8s linear infinite;
-        z-index: 1;
-    }
-    
-    .orbit2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 190px;
-        height: 190px;
-        margin: -95px 0 0 -95px; /* Center the orbit */
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        animation: rotate 10s linear infinite;
-        z-index: 1;
-    }
-    
-    .orbit3 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 230px;
-        height: 230px;
-        margin: -115px 0 0 -115px; /* Center the orbit */
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        animation: rotate 13s linear infinite;
-        z-index: 1;
-    }
-    
-    .planet {
-        width: 10px;
-        height: 10px;
-        background-color: gray;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-        z-index: 1;
-    }
-    
-    .planet2 {
-        width: 10px;
-        height: 10px;
-        background-color: gray;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-        z-index: 1;
-    }
-    
-    .planet3 {
-        width: 10px;
-        height: 10px;
-        background-color: gray;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -10px 0 0 -10px; /* Center the planet within the orbit */
-        z-index: 1;
-    }
-    @keyframes rotate {
-        0% { transform: rotate(0deg) translateX(118px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(118px) rotate(-360deg); }
-    }
-    
-    .white-hole {
-        position: absolute;
-        top: 50%; /* Center vertically */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%);
-    }
-    
-    @keyframes expand {
-        0% {
-            width: 100px;
-            height: 100px;
-        }
-        100% {
-            width: 8000px;
-            height: 8000px;
-            transform: translate(-50%, -50%) scale(0);
-        }
-    }
 }
-
