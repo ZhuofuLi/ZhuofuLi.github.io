@@ -274,7 +274,7 @@ footer {
     }
     
     .nav-links li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     .nav-links a {
@@ -297,47 +297,83 @@ footer {
     
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        top: 20%; /* Adjusted position */
+        top: 25%; /* Adjusted position */
         width: 200px; /* Smaller profile picture container */
         height: 200px;
+        position: relative;
     }
 
     .profile-picture {
         width: 190px; /* Smaller profile picture */
         height: 190px;
         border: 5px solid white; /* Adjusted border size */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    /* Adjust the orbits and planets to be just outside the profile picture container */
+    /* Adjust the orbits and planets to rotate around the profile picture container */
     .orbit {
-        width: 210px; /* Slightly larger than profile picture container */
-        height: 210px;
-        margin: -105px 0 0 -105px; /* Center the orbit */
+        width: 100px; /* Slightly larger than profile picture container */
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+        animation: rotate-orbit 10s infinite linear;
     }
 
     .orbit2 {
-        width: 220px; /* Slightly larger orbit */
-        height: 220px;
-        margin: -110px 0 0 -110px; /* Center the orbit */
+        width: 130px; /* Slightly larger orbit */
+        height: 130px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+        animation: rotate-orbit 12s infinite linear;
     }
 
     .orbit3 {
-        width: 230px; /* Slightly larger orbit */
-        height: 230px;
-        margin: -115px 0 0 -115px; /* Center the orbit */
+        width: 150px; /* Slightly larger orbit */
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+        animation: rotate-orbit 14s infinite linear;
     }
 
     .planet, .planet2, .planet3 {
         width: 15px; /* Planet size remains the same */
         height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
     }
 
     /* Smaller description text */
     .description {
         font-size: 13px; /* Smaller font size for the description */
         top: 100%; /* Adjust the position relative to the profile picture */
-        left: -10%; /* Center on smaller screens */
+        left: 10%; /* Center on smaller screens */
         transform: translate(-50%, -50%);
+    }
+
+    @keyframes rotate-orbit {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
     }
 
     @keyframes spiral-in-animation {
