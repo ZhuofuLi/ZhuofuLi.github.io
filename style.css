@@ -284,7 +284,7 @@ footer {
 
     h1 {
         top: 5%;
-        font-size: 35px;
+        font-size: 45px;
     }
 
     .about-container {
@@ -295,10 +295,9 @@ footer {
         padding-right: 30px; /* Add some padding to the right */
     }
     
-
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        top: 30%; /* Adjusted position */
+        top: 20%; /* Adjusted position */
         width: 200px; /* Smaller profile picture container */
         height: 200px;
     }
@@ -309,35 +308,35 @@ footer {
         border: 5px solid white; /* Adjusted border size */
     }
 
-    /* Adjust the orbits and planets to be closer to the center dot */
+    /* Adjust the orbits and planets to be just outside the profile picture container */
     .orbit {
-        width: 50px; /* Smaller orbit size */
-        height: 50px;
-        margin: -50px 0 0 -50px; /* Center the orbit */
+        width: 210px; /* Slightly larger than profile picture container */
+        height: 210px;
+        margin: -105px 0 0 -105px; /* Center the orbit */
     }
 
     .orbit2 {
-        width: 60px; /* Smaller orbit size */
-        height: 60px;
-        margin: -75px 0 0 -75px; /* Center the orbit */
+        width: 220px; /* Slightly larger orbit */
+        height: 220px;
+        margin: -110px 0 0 -110px; /* Center the orbit */
     }
 
     .orbit3 {
-        width: 70px; /* Smaller orbit size */
-        height: 70px;
-        margin: -100px 0 0 -100px; /* Center the orbit */
+        width: 230px; /* Slightly larger orbit */
+        height: 230px;
+        margin: -115px 0 0 -115px; /* Center the orbit */
     }
 
     .planet, .planet2, .planet3 {
-        width: 15px; /* Smaller planet size */
+        width: 15px; /* Planet size remains the same */
         height: 15px;
     }
 
     /* Smaller description text */
     .description {
-        font-size: 15px; /* Smaller font size for the description */
+        font-size: 13px; /* Smaller font size for the description */
         top: 100%; /* Adjust the position relative to the profile picture */
-        left: -30%; /* Center on smaller screens */
+        left: -10%; /* Center on smaller screens */
         transform: translate(-50%, -50%);
     }
 
