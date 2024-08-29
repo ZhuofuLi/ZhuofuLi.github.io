@@ -355,7 +355,7 @@ footer {
 
     /* Smaller description text */
     .description {
-        font-size: 14px;
+        font-size: 13px;
         top: 110%;
         left: 5%;
         transform: translate(-50%, -50%);
