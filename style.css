@@ -33,9 +33,11 @@ body, html {
 }
 
 .nav-links a:hover {
-    color: #aaa;
-    z-index: 100;
+    color: #ffcc00;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out, color 0.5s ease-in-out;
 }
+
 
 .header-container {
     position: relative;
@@ -276,6 +278,25 @@ footer {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
     /* Navigation links - vertical and smaller */
     .nav-links {
@@ -294,7 +315,7 @@ footer {
     }
 
     h1 {
-        top: 5%;
+        top: 7%;
         font-size: 50px;
     }
 
@@ -308,7 +329,7 @@ footer {
     
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        top: 17.5%;
+        top: 22%;
         width: 200px;
         height: 200px;
         position: relative;
@@ -322,11 +343,16 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: transform 0.5s ease-out;
+    }
+    
+    .profile-picture-container:hover .profile-picture {
+        animation: none;
     }
 
     /* Smaller description text */
     .description {
-        font-size: 15px;
+        font-size: 14px;
         top: 110%;
         left: 5%;
         transform: translate(-50%, -50%);
@@ -334,7 +360,7 @@ footer {
 
     /* Orbits and planets adjusted for mobile */
     .orbit {
-        top: 17.5%; /* Align with the profile picture */
+        top: 22%; /* Align with the profile picture */
         left: 50%;
         width: 220px; /* Smaller orbit */
         height: 220px;
@@ -346,7 +372,7 @@ footer {
     }
 
     .orbit2 {
-        top: 17.5%;
+        top: 22%;
         left: 50%;
         width: 260px; /* Smaller orbit */
         height: 260px;
@@ -358,7 +384,7 @@ footer {
     }
 
     .orbit3 {
-        top: 17.5%;
+        top: 22%;
         left: 50%;
         width: 300px; /* Smaller orbit */
         height: 300px;
