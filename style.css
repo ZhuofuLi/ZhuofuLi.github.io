@@ -283,6 +283,7 @@ footer {
     }
 
     h1 {
+        top: 5%;
         font-size: 35px;
     }
 
@@ -297,6 +298,7 @@ footer {
 
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
+        top: 30%; /* Adjusted position */
         width: 200px; /* Smaller profile picture container */
         height: 200px;
     }
@@ -333,9 +335,9 @@ footer {
 
     /* Smaller description text */
     .description {
-        font-size: 10px; /* Smaller font size for the description */
+        font-size: 15px; /* Smaller font size for the description */
         top: 100%; /* Adjust the position relative to the profile picture */
-        left: 0; /* Center on smaller screens */
+        left: -30%; /* Center on smaller screens */
         transform: translate(-50%, -50%);
     }
 
