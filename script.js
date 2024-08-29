@@ -26,3 +26,24 @@ function createWhiteHole() {
         whiteHole.remove();
     }, 3500);
 }
+
+function createShootingStar() {
+    const shootingStarsContainer = document.querySelector('.shooting-stars');
+    const shootingStar = document.createElement('div');
+    shootingStar.classList.add('shooting-star');
+
+    // Random position for the shooting star
+    shootingStar.style.top = Math.random() * window.innerHeight + 'px';
+    shootingStar.style.left = Math.random() * window.innerWidth + 'px';
+
+    // Append shooting star to container
+    shootingStarsContainer.appendChild(shootingStar);
+
+    // Remove the shooting star after the animation ends
+    shootingStar.addEventListener('animationend', () => {
+        shootingStar.remove();
+    });
+}
+
+// Generate shooting stars at random intervals
+setInterval(createShootingStar, 10);
