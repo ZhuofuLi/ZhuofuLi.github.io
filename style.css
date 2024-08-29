@@ -331,7 +331,7 @@ footer {
     
     /* Profile picture and orbit adjustments */
     .profile-picture-container {
-        top: 28.5%;
+        top: 31%;
         width: 200px;
         height: 200px;
         position: relative;
@@ -362,7 +362,7 @@ footer {
 
     /* Orbits and planets adjusted for mobile */
     .orbit {
-        top: 28.5%; /* Align with the profile picture */
+        top: 31%; /* Align with the profile picture */
         left: 50%;
         width: 160px; /* Smaller orbit */
         height: 160px;
@@ -374,7 +374,7 @@ footer {
     }
 
     .orbit2 {
-        top: 28.5%;
+        top: 31%;
         left: 50%;
         width: 180px; /* Smaller orbit */
         height: 180px;
@@ -386,7 +386,7 @@ footer {
     }
 
     .orbit3 {
-        top: 28.5%;
+        top: 31%;
         left: 50%;
         width: 194px; /* Smaller orbit */
         height: 194px;
