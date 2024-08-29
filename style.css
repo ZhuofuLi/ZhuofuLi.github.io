@@ -282,6 +282,10 @@ footer {
         padding: 5px 0;
     }
 
+    h1 {
+        font-size: 35px;
+    }
+
     .about-container {
         padding: 20px; /* Keep the existing padding */
         max-width: 800px;
@@ -305,20 +309,20 @@ footer {
 
     /* Adjust the orbits and planets to be closer to the center dot */
     .orbit {
-        width: 100px; /* Smaller orbit size */
-        height: 100px;
+        width: 50px; /* Smaller orbit size */
+        height: 50px;
         margin: -50px 0 0 -50px; /* Center the orbit */
     }
 
     .orbit2 {
-        width: 150px; /* Smaller orbit size */
-        height: 150px;
+        width: 60px; /* Smaller orbit size */
+        height: 60px;
         margin: -75px 0 0 -75px; /* Center the orbit */
     }
 
     .orbit3 {
-        width: 200px; /* Smaller orbit size */
-        height: 200px;
+        width: 70px; /* Smaller orbit size */
+        height: 70px;
         margin: -100px 0 0 -100px; /* Center the orbit */
     }
 
@@ -329,9 +333,20 @@ footer {
 
     /* Smaller description text */
     .description {
-        font-size: 20px; /* Smaller font size for the description */
+        font-size: 10px; /* Smaller font size for the description */
         top: 100%; /* Adjust the position relative to the profile picture */
         left: 0; /* Center on smaller screens */
         transform: translate(-50%, -50%);
+    }
+
+    @keyframes spiral-in-animation {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(720deg) scale(0);
+            opacity: 0;
+        }
     }
 }
