@@ -303,7 +303,7 @@ footer {
     /* Navigation links - vertical and smaller */
     .nav-links {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         padding: 0px 0;
     }
     
