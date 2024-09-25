@@ -26,3 +26,13 @@ function createWhiteHole() {
         whiteHole.remove();
     }, 3500);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Start the astronomy animation
+    const astronomyAnimation = document.getElementById('astronomy-animation');
+
+    // After 5 seconds (when animation is complete), fade out the overlay
+    setTimeout(() => {
+        astronomyAnimation.style.animation = 'fadeOutAstronomy 3s forwards';
+    }, 5000); // Matches the total duration of the planet animation
+});

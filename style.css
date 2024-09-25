@@ -431,3 +431,83 @@ footer {
         }
     }
 }
+
+/* Astronomy-themed animation container */
+#astronomy-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999; /* Overlay on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* The planet moving across the screen */
+.newplanet {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #ffcc00, #ff8c00, #ff4500);
+    border-radius: 50%;
+    box-shadow: 0 0 30px 15px rgba(255, 200, 50, 0.7);
+    animation: movePlanet 5s ease-in-out forwards;
+}
+
+/* Twinkling stars */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    animation: twinkleStars 8s infinite ease-in-out;
+}
+
+/* Animation to move the planet across the screen */
+@keyframes movePlanet {
+    0% {
+        left: -200px;
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+/* Star twinkling effect */
+@keyframes twinkleStars {
+    0% {
+        background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* Fade out the whole animation after it's done */
+@keyframes fadeOutAstronomy {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
