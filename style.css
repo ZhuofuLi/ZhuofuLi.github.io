@@ -511,3 +511,39 @@ footer {
     }
 }
 
+/* Dynamic star styles */
+.star {
+    position: absolute;
+    background: radial-gradient(circle, #fff 0%, #fff8 60%, transparent 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px #fff4;
+    animation: twinkleStar 2.5s infinite alternate;
+}
+@keyframes twinkleStar {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Glowing planet enhancement */
+.newplanet {
+    box-shadow: 0 0 60px 30px #ffcc00, 0 0 120px 60px #ff8c00, 0 0 200px 100px #ff450044;
+    border: 2px solid #fff8;
+}
+
+/* Nebula/gradient background for astronomy animation */
+#astronomy-animation {
+    background: radial-gradient(ellipse at 60% 40%, #2b1d47 0%, #0a0a1a 60%, #000 100%);
+}
+
+#background-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
