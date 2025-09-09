@@ -86,7 +86,7 @@ body, html {
     height: 340px;
     border: 10px solid white;
     object-fit: cover;
-    transition: transform 0.5s ease-out; /* Smoothly restore to original state */
+    transition: transform 0s ease-out; /* Smoothly restore to original state */
 }
 
 
@@ -283,9 +283,45 @@ footer {
     transition: box-shadow 0.5s ease-in-out;
 }
 
+.about-container p {
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: 'Lora', serif;    /* cleaner serif font */
+    color: #ddd;
+    margin-bottom: 22px;
+    text-align: justify;
+    text-indent: 2em;
+}
 
+.about-image {
+    display: block;
+    margin: 20px auto;       /* centers the image */
+    max-width: 45%;          /* keeps it responsive */
+    height: auto;            /* preserves aspect ratio */
+    border-radius: 10px;     /* rounded corners */
+    box-shadow: 0 0 15px rgba(255,255,255,0.2); /* subtle glow */
+}
 
+.about-figure {
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+    max-width: 80%;
+}
 
+.about-figure img {
+    width: 100%;        /* responsive scaling */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.about-figure figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    font-style: italic;
+    color: #ccc;        /* subtle gray text */
+}
 
 
 
@@ -469,7 +505,7 @@ footer {
     height: 100%;
     background: transparent;
     z-index: -1;
-    animation: twinkleStars 8s infinite ease-in-out;
+    animation: twinkleStars 3s infinite ease-in-out;
 }
 
 /* Animation to move the planet across the screen */
@@ -534,6 +570,7 @@ footer {
 /* Nebula/gradient background for astronomy animation */
 #astronomy-animation {
     background: radial-gradient(ellipse at 60% 40%, #2b1d47 0%, #0a0a1a 60%, #000 100%);
+    animation: fadeOutAstronomy 1s ease-in-out 4s forwards; 
 }
 
 #background-stars {
