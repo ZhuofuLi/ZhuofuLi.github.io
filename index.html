@@ -1,53 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Chester Li</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05060d">
+
+  <title>Zhuofu (Chester) Li — Astrophysics, Astrobiology &amp; AI</title>
+  <meta name="description" content="Zhuofu (Chester) Li is a dual Ph.D. candidate in Astrophysics and Astrobiology at the University of Washington, building data-driven and machine-learning methods for dark matter, small Solar System bodies, and large astronomical surveys.">
+  <meta name="author" content="Zhuofu (Chester) Li">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zhuofuli.github.io/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhuofuli.github.io/">
+  <meta property="og:title" content="Zhuofu (Chester) Li — Astrophysics, Astrobiology &amp; AI">
+  <meta property="og:description" content="Dual Ph.D. candidate at the University of Washington — data-driven and machine-learning methods for dark matter, small Solar System bodies, and large astronomical surveys.">
+  <meta property="og:image" content="https://zhuofuli.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zhuofu (Chester) Li — Astrophysics, Astrobiology &amp; AI">
+  <meta name="twitter:description" content="Dual Ph.D. candidate at the University of Washington — astrophysics, astrobiology, machine learning, and large astronomical surveys.">
+  <meta name="twitter:image" content="https://zhuofuli.github.io/assets/img/og-image.png">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts: self-hosted, preloaded -->
+  <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- If JavaScript is unavailable, never let the intro overlay block content. -->
+  <noscript><style>.intro{display:none!important}</style></noscript>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zhuofu Li",
+    "alternateName": "Chester Li",
+    "url": "https://zhuofuli.github.io/",
+    "image": "https://zhuofuli.github.io/assets/img/og-image.png",
+    "jobTitle": "Ph.D. Candidate in Astrophysics and Astrobiology",
+    "description": "Dual Ph.D. candidate building data-driven and machine-learning methods for dark matter, small Solar System bodies, and large astronomical surveys.",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "University of Washington" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of California, Los Angeles" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" },
+    "knowsAbout": ["Astrophysics", "Astrobiology", "Machine Learning", "Simulation-Based Inference", "Dark Matter", "Stellar Streams", "Vera C. Rubin Observatory", "Asteroid Dynamics", "Data Science", "Scientific Computing"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=tfgy_IUAAAAJ&hl=en",
+      "https://www.linkedin.com/in/chester-li-0354071a2/",
+      "https://github.com/ZhuofuLi"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div id="astronomy-animation">
-        <div class="newplanet"></div>
-        <div class="stars"></div>
-    </div>    
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/about.html">About Me</a></li>
-                <li><a href="/files/CV.pdf" target="_blank">CV</a></li>
-                <li><a href="https://scholar.google.com/citations?user=tfgy_IUAAAAJ&hl=en&oi=sra" target="_blank">Publications</a></li>
-                <li><a href="https://www.linkedin.com/in/chester-li-0354071a2/" target="_blank">LinkedIn</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-container">
-            <h1>Chester Li</h1>
-            <div class="profile-picture-container">
-                <img src="/images/profile.jpg" alt="Profile Picture of Chester Li" class="profile-picture">
-            <p class="description">Astrophysics • Statistics • Machine Learning</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Animated star field (decorative) -->
+  <canvas id="starfield" class="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============ SVG icon sprite ============ -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 1.6 13.7 10.3 22.4 12 13.7 13.7 12 22.4 10.3 13.7 1.6 12 10.3 10.3Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13M7 12l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9.5 9.5h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1ZM5.5 14.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5M4 4l6 6M15 20h5v-5M20 20l-6-6"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3.2 9h3.6v11.5H3.2zM9.2 9h3.45v1.57h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.5v6.28h-3.6v-5.56c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.65H9.2z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.05 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.71 1.03 1.62 1.03 2.74 0 3.92-2.34 4.79-4.57 5.04.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5L12 4Z"/><path d="M6.5 10.7v4.8c0 1.4 2.46 2.7 5.5 2.7s5.5-1.3 5.5-2.7v-4.8M21.5 8.7v5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1ZM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.1" fill="currentColor" stroke="none"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(-28 12 12)"/><circle cx="20.8" cy="7.3" r="1.7" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.4"/><path d="M8.5 13.3 6.5 21.5 12 18.5 17.5 21.5 15.5 13.3"/></symbol>
+    <symbol id="i-observatory" viewBox="0 0 24 24"><path d="M3.5 20h17M5 20a7 7 0 0 1 14 0M12 6.5V13"/><circle cx="12" cy="5" r="1.9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="13" r="1.9" fill="currentColor" stroke="none"/><path d="M8.6 16.4a5 5 0 0 1 0-6.8M15.4 9.6a5 5 0 0 1 0 6.8M6 19.4a9 9 0 0 1 0-12.8M18 6.6a9 9 0 0 1 0 12.8"/></symbol>
+    <symbol id="i-planet" viewBox="0 0 24 24"><circle cx="11.5" cy="11.5" r="6.2"/><ellipse cx="11.5" cy="11.5" rx="11" ry="3.6" transform="rotate(-30 11.5 11.5)"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><path d="M6.6 6.8 11.4 11.2M6.6 17.2 11.4 12.8M12.6 11.4 17.6 7.9M12.6 12.6 17.6 16.1"/><circle cx="5" cy="6" r="2.3" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="2.3" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><circle cx="19" cy="7" r="2.3" fill="currentColor" stroke="none"/><circle cx="19" cy="17" r="2.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6 2.5 12 8 18M16 6l5.5 6L16 18M13.5 4 10.5 20"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2.5 8 12 13l9.5-5L12 3ZM2.5 13 12 18l9.5-5M2.5 18 12 23l9.5-5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 21h16M7 21V11M12.5 21V5M18 21v-7"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><path d="M4 5h16v6H4ZM4 13h16v6H4M7.5 8h.01M7.5 16h.01"/></symbol>
+  </svg>
+
+  <!-- ============ Intro overlay ============ -->
+  <div class="intro" aria-hidden="true">
+    <img class="intro__mark" src="assets/img/favicon.svg" alt="" width="76" height="76">
+    <div class="intro__bar"></div>
+  </div>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Zhuofu Chester Li — back to top">
+        <img class="brand__mark" src="assets/img/favicon.svg" alt="" width="30" height="30">
+        <span class="brand__name">Zhuofu <span>Li</span></span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#research">Research</a></li>
+          <li><a class="nav__link" href="#skills">Toolkit</a></li>
+          <li><a class="nav__link" href="#education">Education</a></li>
+          <li><a class="nav__link" href="#gallery">Gallery</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="files/CV.pdf" target="_blank" rel="noopener">
+          Curriculum Vitae
+        </a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow" data-reveal>Ph.D. Candidate · University of Washington</p>
+          <h1 class="hero__title" data-reveal style="--reveal-delay:.06s">
+            <span class="line">Zhuofu</span>
+            <span class="line">(Chester)&nbsp;Li</span>
+          </h1>
+          <p class="hero__role" data-reveal style="--reveal-delay:.12s">
+            Dual Ph.D. Candidate in Astrophysics &amp; Astrobiology
+          </p>
+          <p class="hero__lead" data-reveal style="--reveal-delay:.18s">
+            I develop data-driven and machine-learning methods to study dark matter,
+            the small bodies of our Solar System, and the next generation of large
+            astronomical surveys.
+          </p>
+          <div class="hero__actions" data-reveal style="--reveal-delay:.24s">
+            <a class="btn btn--primary" href="#research">
+              Explore research
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="files/CV.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>
+              Curriculum Vitae
+            </a>
+          </div>
+          <div class="hero__socials" data-reveal style="--reveal-delay:.3s">
+            <a class="icon-link" href="https://scholar.google.com/citations?user=tfgy_IUAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg>
+            </a>
+            <a class="icon-link" href="https://github.com/ZhuofuLi" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/chester-li-0354071a2/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg>
+            </a>
+            <a class="icon-link" data-email-link href="#contact" aria-label="Email">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__portrait" data-reveal style="--reveal-delay:.2s">
+          <div class="orbit-ring orbit-ring--2"><span class="orbit-ring__dot"></span></div>
+          <div class="orbit-ring orbit-ring--1"><span class="orbit-ring__dot"></span></div>
+          <div class="portrait">
+            <picture>
+              <source type="image/webp" srcset="assets/img/profile-480.webp 480w, assets/img/profile-960.webp 960w" sizes="(max-width: 880px) 53vw, 260px">
+              <img src="assets/img/profile-960.jpg"
+                   srcset="assets/img/profile-480.jpg 480w, assets/img/profile-960.jpg 960w"
+                   sizes="(max-width: 880px) 53vw, 260px"
+                   alt="Portrait of Zhuofu (Chester) Li" width="960" height="1131"
+                   fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to content">
+        <span>Scroll</span>
+        <span class="scroll-cue__line"></span>
+      </a>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 class="section-head__title" id="about-title">
+            Bridging astrophysics, statistics, and machine&nbsp;learning
+          </h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__bio" data-reveal>
+            <p class="lead">
+              I am a dual Ph.D. candidate in Astrophysics and Astrobiology at the
+              University of Washington, working at the intersection of astronomy,
+              statistics, and artificial intelligence.
+            </p>
+            <p>
+              My research turns massive astronomical datasets into physical insight —
+              applying machine learning, Bayesian inference, and large-scale simulation
+              to questions ranging from the nature of dark matter to the dynamics of
+              small Solar System bodies. Alongside the science, I build the
+              high-performance computing pipelines that make this analysis possible
+              at survey scale.
+            </p>
+            <p>
+              I earned my dual B.S. in Astrophysics and Geophysics from UCLA with
+              Departmental Highest Honors, and I am completing a dual M.S. in
+              Astrophysics and Statistics alongside my doctoral work. Beyond research,
+              I have helped lead student scientific communities — co-founding the Data
+              Science Society at UW and serving as President of UCLA's Astronomical
+              Society — and I am an active astrophotographer drawn to the same skies
+              I study.
+            </p>
+          </div>
+          <aside class="facts" data-reveal style="--reveal-delay:.1s">
+            <p class="facts__title">At a glance</p>
+            <div class="facts__item">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg>
+              <span><span class="facts__label">Program</span>
+              <span class="facts__value">Dual Ph.D., Astrophysics &amp; Astrobiology</span></span>
             </div>
-            <!-- Rotating objects -->
-        <div class="center-dot"></div>
-        <div class="orbit">
-            <div class="planet"></div>
-        </div>
-        <div class="orbit orbit2">
-            <div class="planet planet2"></div>
-        </div>
-        <div class="orbit orbit3">
-            <div class="planet planet3"></div>
+            <div class="facts__item">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-orbit"/></svg>
+              <span><span class="facts__label">Track</span>
+              <span class="facts__value">Advanced Data Science</span></span>
             </div>
+            <div class="facts__item">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+              <span><span class="facts__label">Institution</span>
+              <span class="facts__value">University of Washington</span></span>
+            </div>
+            <div class="facts__item">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+              <span><span class="facts__label">Based in</span>
+              <span class="facts__value">Seattle, Washington</span></span>
+            </div>
+          </aside>
         </div>
-    </header>
-    <main>
-        <!-- Additional content sections could go here -->
-    </main>
-    <script src="script.js"></script>
-    <footer>
-        <div class="footer-content">
-            <span>DO NOT CLICK THIS!</span>
+        <div class="stats" data-reveal style="--reveal-delay:.15s">
+          <div class="stat">
+            <div class="stat__num gradient-text">15k+</div>
+            <div class="stat__label">Asteroids in the orbit pipeline</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num gradient-text">150k+</div>
+            <div class="stat__label">Particle-spray simulations</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num gradient-text">1,000</div>
+            <div class="stat__label">Orbital clones per object</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num gradient-text">4–4.8 h</div>
+            <div class="stat__label">Trojan spin-barrier limit</div>
+          </div>
         </div>
-    </footer>    
+      </div>
+    </section>
+
+    <!-- ============ Research ============ -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Research</p>
+          <h2 class="section-head__title" id="research-title">Selected research</h2>
+          <p class="section-head__intro">
+            Three threads of my doctoral work — the small bodies of the Solar System,
+            the nature of dark matter, and the time-domain sky — each built on large
+            datasets and scientific computing.
+          </p>
+        </div>
+
+        <div class="projects">
+          <!-- Project 01 -->
+          <article class="project" data-reveal>
+            <div class="project__index">01</div>
+            <div class="project__main">
+              <div class="project__head">
+                <h3 class="project__title">Temporary Jovian Co-orbitals</h3>
+                <span class="project__status project__status--active">
+                  <span class="dot"></span>Active
+                </span>
+              </div>
+              <p class="project__meta">
+                2025 – Present &nbsp;·&nbsp; Advisor: <span>Prof. Sarah Greenstreet</span>
+              </p>
+              <p class="project__desc">
+                A high-performance pipeline that integrates asteroid orbits to identify
+                objects temporarily captured into co-orbital resonance with Jupiter. For
+                each of 15,000+ asteroids, it generates 1,000 statistical clones to
+                propagate observational uncertainty, then runs N-body simulations across
+                millions of years to trace long-term dynamical evolution. Classification
+                algorithms flag anomalous trajectories, enabling robust detection of
+                these short-lived co-orbital states.
+              </p>
+              <div class="project__metrics">
+                <div class="metric">
+                  <div class="metric__value">15k+</div>
+                  <div class="metric__label">Asteroids integrated</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">1,000</div>
+                  <div class="metric__label">Clones per object</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">Myr-scale</div>
+                  <div class="metric__label">N-body integration</div>
+                </div>
+              </div>
+              <div class="chips project__tags">
+                <span class="chip">Python</span>
+                <span class="chip">N-body simulation</span>
+                <span class="chip">HPC clusters</span>
+                <span class="chip">Anomaly detection</span>
+                <span class="chip">Orbital dynamics</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project" data-reveal>
+            <div class="project__index">02</div>
+            <div class="project__main">
+              <div class="project__head">
+                <h3 class="project__title">Inferring Dark Matter Subhalos</h3>
+                <span class="project__status"><span class="dot"></span>Recent</span>
+              </div>
+              <p class="project__meta">
+                2024 – 2025 &nbsp;·&nbsp; Advisor: <span>Prof. Nora Shipp</span>
+              </p>
+              <p class="project__desc">
+                Simulation-based inference for the dark matter subhalos that perturb
+                stellar streams. Using Neural Posterior Estimation, the method recovers
+                a perturber's mass, scale radius, velocity, impact parameter, and
+                orientation directly from stream data. Transformer-based networks with
+                conditional normalizing flows — trained on 150,000+ particle-spray
+                simulations — yield well-calibrated posteriors across a high-dimensional
+                parameter space, and forecast how deeper surveys will sharpen these
+                constraints.
+              </p>
+              <div class="project__metrics">
+                <div class="metric">
+                  <div class="metric__value">150k+</div>
+                  <div class="metric__label">Training simulations</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">6</div>
+                  <div class="metric__label">Parameters inferred</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">NPE</div>
+                  <div class="metric__label">Calibrated posteriors</div>
+                </div>
+              </div>
+              <div class="chips project__tags">
+                <span class="chip">PyTorch</span>
+                <span class="chip">Normalizing flows</span>
+                <span class="chip">Transformers</span>
+                <span class="chip">Bayesian inference</span>
+                <span class="chip">Stellar streams</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project" data-reveal>
+            <div class="project__index">03</div>
+            <div class="project__main">
+              <div class="project__head">
+                <h3 class="project__title">Rotation Periods of Jupiter Trojans</h3>
+                <span class="project__status"><span class="dot"></span>Completed</span>
+              </div>
+              <p class="project__meta">
+                2022 – 2024 &nbsp;·&nbsp; Advisor: <span>Prof. Željko Ivezić</span>
+              </p>
+              <p class="project__desc">
+                A time-domain study of Jupiter Trojan asteroids using ZTF light curves.
+                The work processes millions of noisy time-series observations through
+                statistical filtering and noise-correction pipelines, then applies
+                period-finding algorithms with cross-validation against external
+                catalogs to recover reliable rotation periods. The resulting population
+                analysis identifies a spin-barrier limit of 4–4.8 hours and constrains
+                the physical structure of these primitive bodies.
+              </p>
+              <div class="project__metrics">
+                <div class="metric">
+                  <div class="metric__value">Millions</div>
+                  <div class="metric__label">Observations processed</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">ZTF</div>
+                  <div class="metric__label">Survey light curves</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__value">4–4.8 h</div>
+                  <div class="metric__label">Spin-barrier limit</div>
+                </div>
+              </div>
+              <div class="chips project__tags">
+                <span class="chip">Time-series analysis</span>
+                <span class="chip">Period-finding</span>
+                <span class="chip">ZTF</span>
+                <span class="chip">Statistical modeling</span>
+                <span class="chip">Light curves</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Research interests -->
+        <h3 class="subhead" data-reveal>Research interests &amp; directions</h3>
+        <div class="interests">
+          <article class="interest" data-reveal>
+            <div class="interest__icon">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-observatory"/></svg>
+            </div>
+            <h4 class="interest__title">Rubin Observatory &amp; LSST</h4>
+            <p class="interest__text">
+              Preparing analysis methods for the Legacy Survey of Space and Time — the
+              decade-long, billions-of-objects time-domain survey from the Vera C. Rubin
+              Observatory — building on time-series work with precursor surveys.
+            </p>
+          </article>
+          <article class="interest" data-reveal style="--reveal-delay:.08s">
+            <div class="interest__icon">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-signal"/></svg>
+            </div>
+            <h4 class="interest__title">SETI &amp; Technosignatures</h4>
+            <p class="interest__text">
+              The search for technosignatures — applying anomaly detection and
+              large-scale signal processing to identify the rare, the unexplained, and
+              the potentially artificial in astronomical data.
+            </p>
+          </article>
+          <article class="interest" data-reveal style="--reveal-delay:.16s">
+            <div class="interest__icon">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-planet"/></svg>
+            </div>
+            <h4 class="interest__title">Exoplanets &amp; Radial Velocity</h4>
+            <p class="interest__text">
+              Detecting and characterizing exoplanets from radial-velocity and
+              photometric time series, where careful statistical modeling separates
+              faint planetary signals from stellar and instrumental noise.
+            </p>
+          </article>
+          <article class="interest" data-reveal style="--reveal-delay:.24s">
+            <div class="interest__icon">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-network"/></svg>
+            </div>
+            <h4 class="interest__title">Astronomy AI at Scale</h4>
+            <p class="interest__text">
+              Machine learning purpose-built for astronomy — simulation-based inference,
+              deep learning, and anomaly detection that turn survey-scale datasets into
+              physical understanding.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Toolkit / Skills ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Toolkit</p>
+          <h2 class="section-head__title" id="skills-title">Technical capabilities</h2>
+          <p class="section-head__intro">
+            The methods and tools I use to move from raw survey data to calibrated
+            scientific results.
+          </p>
+        </div>
+        <div class="skills">
+          <article class="skill-card" data-reveal>
+            <div class="skill-card__head">
+              <div class="skill-card__icon">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg>
+              </div>
+              <h3 class="skill-card__title">Programming</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">TensorFlow</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">scikit-learn</span>
+              <span class="chip">C++</span>
+              <span class="chip">R</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Java</span>
+            </div>
+          </article>
+          <article class="skill-card" data-reveal style="--reveal-delay:.08s">
+            <div class="skill-card__head">
+              <div class="skill-card__icon">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg>
+              </div>
+              <h3 class="skill-card__title">Machine Learning</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Deep Learning</span>
+              <span class="chip">CNNs</span>
+              <span class="chip">Transformers</span>
+              <span class="chip">Simulation-Based Inference</span>
+              <span class="chip">Normalizing Flows</span>
+              <span class="chip">Anomaly Detection</span>
+              <span class="chip">NLP</span>
+              <span class="chip">Reinforcement Learning</span>
+            </div>
+          </article>
+          <article class="skill-card" data-reveal style="--reveal-delay:.16s">
+            <div class="skill-card__head">
+              <div class="skill-card__icon">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg>
+              </div>
+              <h3 class="skill-card__title">Statistical &amp; Quantitative Methods</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Bayesian Inference</span>
+              <span class="chip">Time-Series Modeling</span>
+              <span class="chip">Monte Carlo Methods</span>
+              <span class="chip">Stochastic Simulation</span>
+              <span class="chip">Optimization</span>
+              <span class="chip">Risk Modeling</span>
+            </div>
+          </article>
+          <article class="skill-card" data-reveal style="--reveal-delay:.24s">
+            <div class="skill-card__head">
+              <div class="skill-card__icon">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-server"/></svg>
+              </div>
+              <h3 class="skill-card__title">High-Performance Computing</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Parallel Computing</span>
+              <span class="chip">GPU Acceleration</span>
+              <span class="chip">N-body Simulation</span>
+              <span class="chip">Workflow Automation</span>
+              <span class="chip">Large-Scale Pipelines</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Education & Honors ============ -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Background</p>
+          <h2 class="section-head__title" id="education-title">Education &amp; honors</h2>
+        </div>
+        <ol class="timeline" data-reveal>
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <p class="timeline__date">2022 – Present</p>
+            <h3 class="timeline__title">Dual Ph.D., Astrophysics &amp; Astrobiology</h3>
+            <p class="timeline__org">University of Washington, Seattle</p>
+            <p class="timeline__detail">Advanced Data Science Track</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <p class="timeline__date">2022 – Present</p>
+            <h3 class="timeline__title">Dual M.S., Astrophysics &amp; Statistics</h3>
+            <p class="timeline__org">University of Washington, Seattle</p>
+            <p class="timeline__detail">Machine Learning &amp; Big Data Track</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <p class="timeline__date">2018 – 2022</p>
+            <h3 class="timeline__title">Dual B.S., Astrophysics &amp; Geophysics</h3>
+            <p class="timeline__org">University of California, Los Angeles</p>
+            <p class="timeline__detail">Departmental Highest Honors</p>
+          </li>
+        </ol>
+        <div class="awards" data-reveal style="--reveal-delay:.1s">
+          <div class="award">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>
+            <div>
+              <p class="award__title">Salutatorian — Dept. of Earth, Planetary &amp; Space Sciences</p>
+              <p class="award__year">UCLA · 2022</p>
+            </div>
+          </div>
+          <div class="award">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>
+            <div>
+              <p class="award__title">Chancellor's Service Award</p>
+              <p class="award__year">UCLA · 2022</p>
+            </div>
+          </div>
+          <div class="award">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>
+            <div>
+              <p class="award__title">Astronomy Summer Undergraduate Research Fellowship</p>
+              <p class="award__year">Caltech · 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Astrophotography ============ -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Astrophotography</p>
+          <h2 class="section-head__title" id="gallery-title">Light from deep space</h2>
+          <p class="section-head__intro">
+            Beyond research, I photograph and process the night sky. Every frame below
+            was captured and processed by me — select an image to view it larger.
+          </p>
+        </div>
+        <div class="gallery" data-reveal>
+          <button class="gallery__item" type="button"
+                  data-full="assets/img/m16-1600.jpg"
+                  data-caption="The Eagle Nebula (M16) — a stellar nursery in Serpens. Captured and processed by Zhuofu Li.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/m16-800.webp">
+              <img src="assets/img/m16-800.jpg" alt="The Eagle Nebula (M16), a glowing star-forming region" width="800" height="1095" loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery__caption">
+              <span>Eagle Nebula · M16</span>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>
+            </span>
+          </button>
+          <button class="gallery__item" type="button"
+                  data-full="assets/img/m31-1600.jpg"
+                  data-caption="The Andromeda Galaxy (M31) — our nearest large galactic neighbour. Captured and processed by Zhuofu Li.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/m31-800.webp">
+              <img src="assets/img/m31-800.jpg" alt="The Andromeda Galaxy (M31), a vast spiral galaxy" width="800" height="588" loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery__caption">
+              <span>Andromeda Galaxy · M31</span>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>
+            </span>
+          </button>
+          <button class="gallery__item" type="button"
+                  data-full="assets/img/m42-1600.jpg"
+                  data-caption="The Orion Nebula (M42) — one of the brightest nebulae in the night sky. Captured and processed by Zhuofu Li.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/m42-800.webp">
+              <img src="assets/img/m42-800.jpg" alt="The Orion Nebula (M42), a bright emission nebula" width="800" height="571" loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery__caption">
+              <span>Orion Nebula · M42</span>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>
+            </span>
+          </button>
+          <button class="gallery__item" type="button"
+                  data-full="assets/img/rosette-1600.jpg"
+                  data-caption="The Rosette Nebula (NGC 2244) — a vast emission nebula in Monoceros. Captured and processed by Zhuofu Li.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/rosette-800.webp">
+              <img src="assets/img/rosette-800.jpg" alt="The Rosette Nebula (NGC 2244), a circular emission nebula" width="800" height="770" loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery__caption">
+              <span>Rosette Nebula · NGC 2244</span>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__panel" data-reveal>
+          <p class="eyebrow" style="justify-content:center">Contact</p>
+          <h2 class="contact__title" id="contact-title">Let's connect</h2>
+          <p class="contact__text">
+            I'm always glad to talk research, collaborations, and opportunities across
+            astronomy, AI, and data science — whether you're a fellow researcher, a
+            recruiter, or simply curious about the cosmos.
+          </p>
+          <div class="contact__email">
+            <span data-email>zhuofu [at] uw.edu</span>
+            <button class="copy-btn" type="button" aria-label="Copy email address">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
+            </button>
+          </div>
+          <div class="contact__links">
+            <a class="btn btn--primary" data-email-link href="#contact">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+              Email me
+            </a>
+            <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=tfgy_IUAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg>
+              Google Scholar
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/ZhuofuLi" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+              GitHub
+            </a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/chester-li-0354071a2/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer__brand" href="#top" aria-label="Zhuofu Chester Li — back to top">
+        <img class="brand__mark" src="assets/img/favicon.svg" alt="" width="26" height="26">
+        <span>Zhuofu (Chester) Li</span>
+      </a>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#skills">Toolkit</a>
+        <a href="#education">Education</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__meta">
+        <span>© <span data-year>2026</span> Zhuofu (Chester) Li · Seattle, Washington</span>
+        <button class="easter-star" type="button" aria-label="A small surprise">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Lightbox ============ -->
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Astrophotography viewer">
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close viewer">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-prev"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--next" type="button" aria-label="Next image">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-next"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" alt="">
+      <p class="lightbox__caption"></p>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

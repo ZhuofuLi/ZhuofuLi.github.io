@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05060d">
+  <meta name="robots" content="noindex, follow">
+  <title>Page not found — Zhuofu (Chester) Li</title>
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <style>
+    .void-page {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+    .void-code {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 18vw, 11rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+    }
+    .void-page p { color: var(--text-dim); max-width: 42ch; margin-inline: auto; }
+    .void-page .eyebrow { justify-content: center; margin-bottom: 1.25rem; }
+    .void-page .btn { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <canvas id="starfield" class="starfield" aria-hidden="true"></canvas>
+  <main class="void-page">
+    <div>
+      <p class="eyebrow">Error 404</p>
+      <div class="void-code gradient-text">404</div>
+      <h1 style="font-size:var(--fs-h2);margin-bottom:1rem">Lost in space</h1>
+      <p>
+        This page has drifted beyond the observable universe — the link may be
+        broken, or the page may have moved.
+      </p>
+      <a class="btn btn--primary" href="/">
+        Return home
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round" d="M4 12h15M13 5l7 7-7 7"/>
+    </symbol>
+  </svg>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
