@@ -73,6 +73,8 @@
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 1.6 13.7 10.3 22.4 12 13.7 13.7 12 22.4 10.3 13.7 1.6 12 10.3 10.3Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13M7 12l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></symbol>
+    <symbol id="i-binary" viewBox="0 0 24 24"><circle cx="8" cy="12" r="3.6" fill="currentColor" stroke="none"/><circle cx="17.5" cy="12" r="2.4"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9.5 9.5h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1ZM5.5 14.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18"/></symbol>
     <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
@@ -87,7 +89,6 @@
     <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.4"/><path d="M8.5 13.3 6.5 21.5 12 18.5 17.5 21.5 15.5 13.3"/></symbol>
     <symbol id="i-observatory" viewBox="0 0 24 24"><path d="M3.5 20h17M5 20a7 7 0 0 1 14 0M12 6.5V13"/><circle cx="12" cy="5" r="1.9" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="13" r="1.9" fill="currentColor" stroke="none"/><path d="M8.6 16.4a5 5 0 0 1 0-6.8M15.4 9.6a5 5 0 0 1 0 6.8M6 19.4a9 9 0 0 1 0-12.8M18 6.6a9 9 0 0 1 0 12.8"/></symbol>
-    <symbol id="i-planet" viewBox="0 0 24 24"><circle cx="11.5" cy="11.5" r="6.2"/><ellipse cx="11.5" cy="11.5" rx="11" ry="3.6" transform="rotate(-30 11.5 11.5)"/></symbol>
     <symbol id="i-network" viewBox="0 0 24 24"><path d="M6.6 6.8 11.4 11.2M6.6 17.2 11.4 12.8M12.6 11.4 17.6 7.9M12.6 12.6 17.6 16.1"/><circle cx="5" cy="6" r="2.3" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="2.3" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><circle cx="19" cy="7" r="2.3" fill="currentColor" stroke="none"/><circle cx="19" cy="17" r="2.3" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6 2.5 12 8 18M16 6l5.5 6L16 18M13.5 4 10.5 20"/></symbol>
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2.5 8 12 13l9.5-5L12 3ZM2.5 13 12 18l9.5-5M2.5 18 12 23l9.5-5"/></symbol>
@@ -112,6 +113,7 @@
         <ul class="nav__list">
           <li><a class="nav__link" href="#about">About</a></li>
           <li><a class="nav__link" href="#research">Research</a></li>
+          <li><a class="nav__link" href="#publications">Publications</a></li>
           <li><a class="nav__link" href="#skills">Toolkit</a></li>
           <li><a class="nav__link" href="#education">Education</a></li>
           <li><a class="nav__link" href="#gallery">Gallery</a></li>
@@ -219,11 +221,13 @@
             <p>
               I earned my dual B.S. in Astrophysics and Geophysics from UCLA with
               Departmental Highest Honors, and I am completing a dual M.S. in
-              Astrophysics and Statistics alongside my doctoral work. Beyond research,
-              I have helped lead student scientific communities — co-founding the Data
-              Science Society at UW and serving as President of UCLA's Astronomical
-              Society — and I am an active astrophotographer drawn to the same skies
-              I study.
+              Astrophysics and Statistics alongside my doctoral work. At UW I also
+              teach <em>ASTR 324 — Astrostatistics &amp; Machine Learning in
+              Astronomy</em> and <em>ASTR 302 — Python for Astronomy</em>. Beyond
+              research, I have helped lead student scientific communities — co-founding
+              the Data Science Society at UW and serving as President of UCLA's
+              Astronomical Society — and I am an active astrophotographer drawn to the
+              same skies I study.
             </p>
           </div>
           <aside class="facts" data-reveal style="--reveal-delay:.1s">
@@ -237,6 +241,11 @@
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-orbit"/></svg>
               <span><span class="facts__label">Track</span>
               <span class="facts__value">Advanced Data Science</span></span>
+            </div>
+            <div class="facts__item">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-network"/></svg>
+              <span><span class="facts__label">Advisor</span>
+              <span class="facts__value">Prof. Željko Ivezić</span></span>
             </div>
             <div class="facts__item">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
@@ -337,20 +346,19 @@
             <div class="project__main">
               <div class="project__head">
                 <h3 class="project__title">Inferring Dark Matter Subhalos</h3>
-                <span class="project__status"><span class="dot"></span>Recent</span>
+                <span class="project__status"><span class="dot"></span>Published 2025</span>
               </div>
               <p class="project__meta">
-                2024 – 2025 &nbsp;·&nbsp; Advisor: <span>Prof. Nora Shipp</span>
+                2024 – 2025 &nbsp;·&nbsp; Advisor: <span>Prof. Nora Shipp</span> &nbsp;·&nbsp; LSST&#8209;DESC
               </p>
               <p class="project__desc">
-                Simulation-based inference for the dark matter subhalos that perturb
-                stellar streams. Using Neural Posterior Estimation, the method recovers
-                a perturber's mass, scale radius, velocity, impact parameter, and
-                orientation directly from stream data. Transformer-based networks with
-                conditional normalizing flows — trained on 150,000+ particle-spray
-                simulations — yield well-calibrated posteriors across a high-dimensional
-                parameter space, and forecast how deeper surveys will sharpen these
-                constraints.
+                Forecasting dark matter subhalo constraints from stellar streams via
+                implicit likelihood inference. Neural Posterior Estimation recovers a
+                perturber's mass, scale radius, velocity, and encounter geometry
+                directly from stream data. Tested on the ATLAS–Aliqa Uma stream with
+                150,000+ Lagrange-Cloud particle-spray simulations and conditional
+                normalizing flows, the approach achieves well-calibrated posteriors
+                and 15–20% subhalo-mass uncertainty under ideal LSST coverage.
               </p>
               <div class="project__metrics">
                 <div class="metric">
@@ -362,8 +370,8 @@
                   <div class="metric__label">Parameters inferred</div>
                 </div>
                 <div class="metric">
-                  <div class="metric__value">NPE</div>
-                  <div class="metric__label">Calibrated posteriors</div>
+                  <div class="metric__value">15–20%</div>
+                  <div class="metric__label">Mass uncertainty (LSST)</div>
                 </div>
               </div>
               <div class="chips project__tags">
@@ -373,6 +381,10 @@
                 <span class="chip">Bayesian inference</span>
                 <span class="chip">Stellar streams</span>
               </div>
+              <a class="paper-link" href="https://arxiv.org/abs/2512.07960" target="_blank" rel="noopener">
+                Read paper · arXiv:2512.07960
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
             </div>
           </article>
 
@@ -382,28 +394,29 @@
             <div class="project__main">
               <div class="project__head">
                 <h3 class="project__title">Rotation Periods of Jupiter Trojans</h3>
-                <span class="project__status"><span class="dot"></span>Completed</span>
+                <span class="project__status project__status--first"><span class="dot"></span>First author · Icarus 2025</span>
               </div>
               <p class="project__meta">
                 2022 – 2024 &nbsp;·&nbsp; Advisor: <span>Prof. Željko Ivezić</span>
               </p>
               <p class="project__desc">
-                A time-domain study of Jupiter Trojan asteroids using ZTF light curves.
-                The work processes millions of noisy time-series observations through
-                statistical filtering and noise-correction pipelines, then applies
-                period-finding algorithms with cross-validation against external
-                catalogs to recover reliable rotation periods. The resulting population
-                analysis identifies a spin-barrier limit of 4–4.8 hours and constrains
-                the physical structure of these primitive bodies.
+                First-author time-domain study of Jupiter Trojan asteroids using ZTF
+                light curves. Statistical filtering and noise-correction pipelines,
+                paired with period-finding algorithms and cross-validation against
+                external catalogs, recover reliable rotation periods for 216 Trojans —
+                80 of them previously uncharacterized. Periods span 4.6–447.8 hours
+                and reveal a 4–4.8 h spin barrier above ~10 km, implying a mean
+                rubble-pile density of ~0.52 g/cm³ and a higher ice fraction than
+                main-belt asteroids.
               </p>
               <div class="project__metrics">
                 <div class="metric">
-                  <div class="metric__value">Millions</div>
-                  <div class="metric__label">Observations processed</div>
+                  <div class="metric__value">216</div>
+                  <div class="metric__label">Trojans characterized</div>
                 </div>
                 <div class="metric">
-                  <div class="metric__value">ZTF</div>
-                  <div class="metric__label">Survey light curves</div>
+                  <div class="metric__value">80</div>
+                  <div class="metric__label">New rotation periods</div>
                 </div>
                 <div class="metric">
                   <div class="metric__value">4–4.8 h</div>
@@ -417,12 +430,16 @@
                 <span class="chip">Statistical modeling</span>
                 <span class="chip">Light curves</span>
               </div>
+              <a class="paper-link" href="https://arxiv.org/abs/2504.15530" target="_blank" rel="noopener">
+                Read paper · Icarus 438, 116609 (2025)
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
             </div>
           </article>
         </div>
 
-        <!-- Research interests -->
-        <h3 class="subhead" data-reveal>Research interests &amp; directions</h3>
+        <!-- Research breadth -->
+        <h3 class="subhead" data-reveal>Research breadth</h3>
         <div class="interests">
           <article class="interest" data-reveal>
             <div class="interest__icon">
@@ -430,10 +447,15 @@
             </div>
             <h4 class="interest__title">Rubin Observatory &amp; LSST</h4>
             <p class="interest__text">
-              Preparing analysis methods for the Legacy Survey of Space and Time — the
-              decade-long, billions-of-objects time-domain survey from the Vera C. Rubin
-              Observatory — building on time-series work with precursor surveys.
+              Co-author on the first Rubin Observatory paper to characterise
+              interstellar comet 3I/ATLAS, recovering pre-discovery detections in
+              commissioning data — with continued involvement in the LSST Solar System
+              Science Collaboration.
             </p>
+            <a class="paper-link" href="https://arxiv.org/abs/2507.13409" target="_blank" rel="noopener">
+              Chandler et al., ApJL 2026
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+            </a>
           </article>
           <article class="interest" data-reveal style="--reveal-delay:.08s">
             <div class="interest__icon">
@@ -441,20 +463,25 @@
             </div>
             <h4 class="interest__title">SETI &amp; Technosignatures</h4>
             <p class="interest__text">
-              The search for technosignatures — applying anomaly detection and
-              large-scale signal processing to identify the rare, the unexplained, and
-              the potentially artificial in astronomical data.
+              Co-authored the UCLA SETI group's L-band Green Bank Telescope search for
+              technosignatures around 11,680 nearby stars — large-scale signal
+              processing for candidate identification.
             </p>
+            <a class="paper-link" href="https://arxiv.org/abs/2308.02712" target="_blank" rel="noopener">
+              Margot et al., AJ 2023
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+            </a>
           </article>
           <article class="interest" data-reveal style="--reveal-delay:.16s">
             <div class="interest__icon">
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-planet"/></svg>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-binary"/></svg>
             </div>
-            <h4 class="interest__title">Exoplanets &amp; Radial Velocity</h4>
+            <h4 class="interest__title">Cataclysmic Variables &amp; Compact Binaries</h4>
             <p class="interest__text">
-              Detecting and characterizing exoplanets from radial-velocity and
-              photometric time series, where careful statistical modeling separates
-              faint planetary signals from stellar and instrumental noise.
+              Systematic search for short-period cataclysmic variables — close
+              interacting binaries with a white-dwarf accretor — in Zwicky Transient
+              Facility time-series data. Presented at the KITP UCSB White Dwarfs
+              program.
             </p>
           </article>
           <article class="interest" data-reveal style="--reveal-delay:.24s">
@@ -469,6 +496,86 @@
             </p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ Publications ============ -->
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Publications</p>
+          <h2 class="section-head__title" id="publications-title">Peer-reviewed and preprint work</h2>
+          <p class="section-head__intro">
+            From first-author leadership to large survey collaborations — every paper is
+            openly available on arXiv.
+          </p>
+        </div>
+        <ol class="publications" data-reveal>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2507.13409" target="_blank" rel="noopener">
+                NSF–DOE Vera C. Rubin Observatory Observations of Interstellar Comet 3I/ATLAS (C/2025 N1)<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">C. O. Chandler, P. H. Bernardinelli, M. Jurić, et al., incl. <strong>Z. (Chester) Li</strong></p>
+            <p class="pub__venue"><span class="pub__journal">The Astrophysical Journal Letters</span> 1001, L35 · <time>2026</time></p>
+          </li>
+          <li class="pub">
+            <p class="pub__badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg> First author</p>
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2504.15530" target="_blank" rel="noopener">
+                Estimates of Rotation Periods for Jupiter Trojans with the Zwicky Transient Facility Photometric Lightcurves<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors"><strong>Z. (Chester) Li</strong>, Y. A. Chowdhury, Ž. Ivezić, A. Mahabal, A. Heinze, et al.</p>
+            <p class="pub__venue"><span class="pub__journal">Icarus</span> 438, 116609 · <time>2025</time></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2512.07960" target="_blank" rel="noopener">
+                Forecasting Dark Matter Subhalo Constraints from Stellar Streams using Implicit Likelihood Inference<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">T. Nguyen, R. Pei, <strong>Z. (Chester) Li</strong>, N. Shipp, et al. — LSST Dark Energy Science Collaboration</p>
+            <p class="pub__venue"><span class="pub__journal">arXiv preprint</span> 2512.07960 · <time>2025</time></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2412.15328" target="_blank" rel="noopener">
+                Deep view of the intracluster light in the Coma cluster of galaxies<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">Y. Jiménez-Teja, J. Román, K. HyeongHan, et al., incl. <strong>Chester Li</strong></p>
+            <p class="pub__venue"><span class="pub__journal">Astronomy &amp; Astrophysics</span> 694, A216 · <time>2025</time></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2312.01936" target="_blank" rel="noopener">
+                Radio Jet Feedback on the Inner Disk of Virgo Spiral Galaxy Messier 58<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">P. M. Ogle, I. E. López, V. Reynaldi, A. Togi, R. M. Rich, et al., incl. <strong>Z. (Chester) Li</strong></p>
+            <p class="pub__venue"><span class="pub__journal">The Astrophysical Journal</span> 962, 196 · <time>2024</time></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2308.02712" target="_blank" rel="noopener">
+                A Search for Technosignatures Around 11,680 Stars with the Green Bank Telescope at 1.15–1.73 GHz<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">J.-L. Margot, M. G. Li, P. Pinchuk, et al., incl. <strong>Z. (Chester) Li</strong></p>
+            <p class="pub__venue"><span class="pub__journal">The Astronomical Journal</span> 166, 206 · <time>2023</time></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2305.03073" target="_blank" rel="noopener">
+                A giant thin stellar stream in the Coma Galaxy Cluster<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </h3>
+            <p class="pub__authors">J. Román, R. M. Rich, N. Ahvazi, L. V. Sales, <strong>Chester Li</strong>, G. Golini, et al.</p>
+            <p class="pub__venue"><span class="pub__journal">Astronomy &amp; Astrophysics</span> 679, A157 · <time>2023</time></p>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -728,6 +835,7 @@
       <nav class="footer__nav" aria-label="Footer">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
         <a href="#skills">Toolkit</a>
         <a href="#education">Education</a>
         <a href="#gallery">Gallery</a>

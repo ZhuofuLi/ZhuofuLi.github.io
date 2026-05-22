@@ -300,6 +300,31 @@ strong { color: var(--text-bright); font-weight: 600; }
 }
 .chip:hover { border-color: var(--stellar); color: var(--text-bright); }
 
+/* ---------- Paper / citation link (reusable) -------------------- */
+.paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  padding: 0.42rem 0.9rem;
+  border-radius: var(--r-pill);
+  background: rgba(110, 168, 255, 0.08);
+  border: 1px solid rgba(110, 168, 255, 0.28);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--stellar);
+  transition: background var(--dur-fast) var(--ease),
+              border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease);
+}
+.paper-link:hover {
+  color: var(--text-bright);
+  border-color: var(--stellar);
+  background: rgba(110, 168, 255, 0.15);
+}
+.paper-link .icon { width: 0.85rem; height: 0.85rem; }
+
 /* ---------- Icons (SVG sprite) ---------------------------------- */
 .icon {
   width: 1.25rem;
@@ -783,6 +808,12 @@ body.nav-open .nav-toggle span::after { transform: translateX(-50%) rotate(-45de
   box-shadow: 0 0 8px 1px var(--comet);
   animation: blink 2.4s var(--ease) infinite;
 }
+.project__status--first { color: var(--stellar); border-color: rgba(110, 168, 255, 0.45); }
+.project__status--first .dot {
+  background: var(--stellar);
+  box-shadow: 0 0 8px 1px var(--stellar);
+  animation: blink 2.4s var(--ease) infinite;
+}
 .project__meta {
   margin-top: 0.7rem;
   font-family: var(--font-mono);
@@ -865,6 +896,71 @@ body.nav-open .nav-toggle span::after { transform: translateX(-50%) rotate(-45de
 .interest__icon .icon { width: 1.4rem; height: 1.4rem; }
 .interest__title { font-size: 1.1rem; margin-bottom: 0.5rem; }
 .interest__text { font-size: 0.94rem; color: var(--text-dim); }
+
+/* ============================================================
+   PUBLICATIONS
+   ============================================================ */
+.publications { display: flex; flex-direction: column; }
+.pub {
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--hairline);
+}
+.pub:first-child { border-top: 0; padding-top: 0; }
+.pub__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--r-pill);
+  background: rgba(110, 168, 255, 0.12);
+  border: 1px solid rgba(110, 168, 255, 0.42);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stellar);
+  margin-bottom: 0.8rem;
+}
+.pub__badge .icon { width: 0.85rem; height: 0.85rem; }
+.pub__title {
+  font-size: clamp(1.05rem, 0.95rem + 0.45vw, 1.2rem);
+  line-height: 1.35;
+  margin-bottom: 0.55rem;
+  font-weight: 500;
+}
+.pub__title a {
+  color: var(--text-bright);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+.pub__title a:hover {
+  color: var(--stellar);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.pub__title .icon {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-left: 0.35rem;
+  vertical-align: -0.05em;
+  color: var(--text-dim);
+  transition: color var(--dur-fast) var(--ease);
+}
+.pub__title a:hover .icon { color: var(--stellar); }
+.pub__authors {
+  font-size: 0.94rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+.pub__authors strong { color: var(--text-bright); font-weight: 600; }
+.pub__venue {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+}
+.pub__venue .pub__journal { font-style: italic; color: var(--text); }
+.pub__venue time { color: var(--stellar); }
 
 /* ============================================================
    SKILLS
